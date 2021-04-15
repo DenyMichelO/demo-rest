@@ -1,9 +1,7 @@
 package bo.edu.ucb.ingsoft.demo.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -68,6 +66,26 @@ public class UsuarioController {
             ex.printStackTrace();
         }
         return result;
+
+    }
+    @PostMapping(path = "/usuario")
+    public Usuario createUsuario(@RequestBody Usuario usuario){
+
+        try {
+            Connection conn = dataSource.getConnection();
+            Statement stmt = conn.createStatement();
+            stmt.execute("INSERT Into usuario values (" + usuario.userId+", '"
+                            +usuario.user+"','"
+                            +usuario.password+"','"
+                            +usuario.nombres+"','"
+                            +usuario.apellidos+"','"
+                            +usuario.email+"','"
+                            +usuario.telefono+"')");
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return usuario;
 
     }
 }

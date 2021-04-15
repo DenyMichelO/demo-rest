@@ -1,3 +1,18 @@
 GET http://localhost:8080/usuario
 ###
-GET http://localhost:8080/usuario/2
+GET http://localhost:8080/usuario/6
+###
+POST http://localhost:8080/usuario
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userId": 6,
+  "user": "Prueba1",
+  "password": "prueba2021",
+  "nombres": "MAria",
+  "apellidos": "Lopez",
+  "email": "maria@gmail.com",
+  "telefono": 77756210
+}
+
