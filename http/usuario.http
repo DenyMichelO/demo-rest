@@ -1,13 +1,29 @@
 GET http://localhost:8080/usuario
 ###
-GET http://localhost:8080/usuario/3
+GET http://localhost:8080/usuario/32
 ###
 POST http://localhost:8080/usuario
 Content-Type: application/json
 Accept: application/json
 
 {
-  "nombre_usuarios": "veterinario3",
-  "contrasena": "veterinario3"
+  "nombre_usuario": "veterinario1",
+  "contrasena": "veterinario11"
+}
+###
+GET http://localhost:8080/tips
+###
+GET http://localhost:8080/tips/6
+###
+POST http://localhost:8080/tips
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre_imagen": "tips5",
+  "url": "http://img5",
+  "veterinario_id": 1,
+  "titulo": "No al Chocolate",
+  "descripcion": "El componente del chocolate que resulta tóxico para los perros se llama teobromina. Mientras que los humanos metabolizan la teobromina fácilmente, los perros lo hacen mucho más lentamente, lo que permite que se acumule en su organismo hasta alcanzar niveles tóxicos."
 }
 
