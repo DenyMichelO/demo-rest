@@ -6,25 +6,47 @@ public class PublicidadEmpresa {
     private String cantidad_meses;
     private String precio;
 
-    private Integer empresacli_id;
+    private Integer empresa_id;
+    private String nombre_anuncio;
+    private String marca_producto;
+
+    private Integer empresacliente_id;
     private String nombre_empresa;
     private String num_telef;
     private String email;
 
-    private Integer empresa_id;
-    private String nombre_anuncio;
-    private String marca_producto;
+    private Integer usuario_id;
+    private String nombre_usuario;
+    private String contraseña;
+
+
 
     public PublicidadEmpresa(){
 
     }
 
-    public String getMarca_producto() {
-        return marca_producto;
+    public Integer getUsuario_id() {
+        return usuario_id;
     }
 
-    public void setMarca_producto(String marca_producto) {
-        this.marca_producto = marca_producto;
+    public void setUsuario_id(Integer usuario_id) {
+        this.usuario_id = usuario_id;
+    }
+
+    public String getNombre_usuario() {
+        return nombre_usuario;
+    }
+
+    public void setNombre_usuario(String nombre_usuario) {
+        this.nombre_usuario = nombre_usuario;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     public Integer getTarifa_id() {
@@ -51,12 +73,36 @@ public class PublicidadEmpresa {
         this.precio = precio;
     }
 
-    public Integer getEmpresacli_id() {
-        return empresacli_id;
+    public Integer getEmpresa_id() {
+        return empresa_id;
     }
 
-    public void setEmpresacli_id(Integer empresacli_id) {
-        this.empresacli_id = empresacli_id;
+    public void setEmpresa_id(Integer empresa_id) {
+        this.empresa_id = empresa_id;
+    }
+
+    public String getNombre_anuncio() {
+        return nombre_anuncio;
+    }
+
+    public void setNombre_anuncio(String nombre_anuncio) {
+        this.nombre_anuncio = nombre_anuncio;
+    }
+
+    public String getMarca_producto() {
+        return marca_producto;
+    }
+
+    public void setMarca_producto(String marca_producto) {
+        this.marca_producto = marca_producto;
+    }
+
+    public Integer getEmpresacliente_id() {
+        return empresacliente_id;
+    }
+
+    public void setEmpresacliente_id(Integer empresacliente_id) {
+        this.empresacliente_id = empresacliente_id;
     }
 
     public String getNombre_empresa() {
@@ -81,21 +127,5 @@ public class PublicidadEmpresa {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Integer getEmpresa_id() {
-        return empresa_id;
-    }
-
-    public void setEmpresa_id(Integer empresa_id) {
-        this.empresa_id = empresa_id;
-    }
-
-    public String getNombre_anuncio() {
-        return nombre_anuncio;
-    }
-
-    public void setNombre_anuncio(String nombre_anuncio) {
-        this.nombre_anuncio = nombre_anuncio;
     }
 }

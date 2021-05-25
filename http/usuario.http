@@ -13,17 +13,33 @@ Accept: application/json
 ###
 GET http://localhost:8080/tips
 ###
-GET http://localhost:8080/tips/6
+GET http://localhost:8080/tips/7
 ###
 POST http://localhost:8080/tips
 Content-Type: application/json
 Accept: application/json
 
 {
-  "nombre_imagen": "tips5",
-  "url": "http://img5",
+  "nombre_imagen": "tips7",
+  "url": "http://img7",
   "veterinario_id": 1,
-  "titulo": "No al Chocolate",
-  "descripcion": "El componente del chocolate que resulta tóxico para los perros se llama teobromina. Mientras que los humanos metabolizan la teobromina fácilmente, los perros lo hacen mucho más lentamente, lo que permite que se acumule en su organismo hasta alcanzar niveles tóxicos."
+  "titulo": "Comida saludable",
+  "descripcion": "La cascara de verduras es una buena opcion para hacer hervir tus sopitas."
 }
+###
+GET http://localhost:8080/empresapublicidad
+###
 
+POST http://localhost:8080/empresapublicidad
+Content-Type: application/json
+Accept: application/json
+
+{
+  "usuario_id": 3,
+  "nombre_empresa": "Pets",
+  "num_telef": "2222222",
+  "email": "pets@gmail.com",
+  "tarifa_id": 1,
+  "nombre_anuncio": "A la moda",
+  "marca_producto": "Dog Fashion"
+}

@@ -19,41 +19,34 @@ public class PublicidadController {
     @Autowired
     private GestionPublicidadBl gestionPublicidadBl;
 
-   /* @GetMapping(path = "/tips")
-    public ResponseDto findAllTips(){
-        return new ResponseDto(true,gestionTipsBl.findAllTips(),null);
+   @GetMapping(path = "/empresapublicidad")
+    public ResponseDto findAllPublicidad(){
+        return new ResponseDto(true,gestionPublicidadBl.findAllPublicidad(),null);
     }
 
-    @GetMapping(path = "/tips/{tipsId}")
-    public ResponseDto findTipsById(@PathVariable Integer tipsId){
-        TipsVeterinario tipsVeterinario = gestionTipsBl.T(tipsId);
-        if(tipsVeterinario != null){
-            return new ResponseDto(true,tipsVeterinario,null);
-        }else {
-            return new ResponseDto(false,null, "No existe el usuario");
-
-        }
-
-    }*/
-    @PostMapping(path = "/empresac")
+    @PostMapping(path = "/empresapublicidad")
     public ResponseDto crearPublicidad(@RequestBody PublicidadEmpresa publicidadEmpresa){
-        if(publicidadEmpresa.getNombre_empresa() == null || publicidadEmpresa.getNombre_empresa().trim().equals("") ){
-            return new ResponseDto(false,null,"El nombre de la imagen debe ser obligatorio:");
+
+        if (publicidadEmpresa.getNombre_anuncio() == null || publicidadEmpresa.getNombre_anuncio().trim().equals("")){
+            return new ResponseDto(false,null,"El nombre del anuncio debe ser obligatorio:");
 
         }
+
         if (publicidadEmpresa.getMarca_producto() == null || publicidadEmpresa.getMarca_producto().trim().equals("")){
-            return new ResponseDto(false,null,"La url de la imagen debe ser obligatoria:");
+            return new ResponseDto(false,null,"La marca del produco debe ser obligatorio:");
 
         }
-        if (publicidadEmpresa.getNum_telef() == null || publicidadEmpresa.getNum_telef().trim().equals("")){
-            return new ResponseDto(false,null,"El titulo debe ser obligatoria:");
+        if(publicidadEmpresa.getNombre_empresa() == null || publicidadEmpresa.getNombre_empresa().trim().equals("") ){
+            return new ResponseDto(false,null,"El nombre de la Empresa debe ser obligatorio:");
 
-        }   if (publicidadEmpresa.getNombre_anuncio() == null || publicidadEmpresa.getNombre_anuncio().trim().equals("")){
-            return new ResponseDto(false,null,"La descripcion debe ser obligatoria:");
+        }
+
+        if (publicidadEmpresa.getNum_telef() == null || publicidadEmpresa.getNum_telef().trim().equals("")){
+            return new ResponseDto(false,null,"El numero de telefono debe ser obligatorio:");
 
         }
         if (publicidadEmpresa.getEmail() == null || publicidadEmpresa.getEmail().trim().equals("")){
-            return new ResponseDto(false,null,"La descripcion debe ser obligatoria:");
+            return new ResponseDto(false,null,"El Email debe ser obligatorio:");
 
         }
         return new ResponseDto(true,gestionPublicidadBl.crearPublicidad(publicidadEmpresa),null);
