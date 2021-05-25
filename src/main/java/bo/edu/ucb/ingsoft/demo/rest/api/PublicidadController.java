@@ -19,10 +19,21 @@ public class PublicidadController {
     @Autowired
     private GestionPublicidadBl gestionPublicidadBl;
 
+    /**
+     *
+     * Metodo para listar las publicidades registradas
+     *
+     */
+
    @GetMapping(path = "/empresapublicidad")
     public ResponseDto findAllPublicidad(){
         return new ResponseDto(true,gestionPublicidadBl.findAllPublicidad(),null);
     }
+    /**
+     *
+     * Metodo para registrar un publicidad
+     *
+     */
 
     @PostMapping(path = "/empresapublicidad")
     public ResponseDto crearPublicidad(@RequestBody PublicidadEmpresa publicidadEmpresa){

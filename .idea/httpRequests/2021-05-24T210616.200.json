@@ -1,0 +1,50 @@
+{
+  "status": true,
+  "response": [
+    {
+      "tips_id": 3,
+      "titulo": "veterinario1",
+      "descripcion": "veterinario11",
+      "veterinario_id": 1,
+      "nombre": "pepito",
+      "apellido": "Perez",
+      "imagen_id": 6,
+      "nombre_imagen": null,
+      "url": "http://img1"
+    },
+    {
+      "tips_id": 4,
+      "titulo": "veterinario1",
+      "descripcion": "veterinario11",
+      "veterinario_id": 1,
+      "nombre": "pepito",
+      "apellido": "Perez",
+      "imagen_id": 7,
+      "nombre_imagen": null,
+      "url": "http://img1"
+    },
+    {
+      "tips_id": 5,
+      "titulo": "No al Chocolate",
+      "descripcion": "El componente del chocolate que resulta tóxico para los perros se llama teobromina. Mientras que los humanos metabolizan la teobromina fácilmente, los perros lo hacen mucho más lentamente, lo que permite que se acumule en su organismo hasta alcanzar niveles tóxicos.",
+      "veterinario_id": 1,
+      "nombre": "pepito",
+      "apellido": "Perez",
+      "imagen_id": 8,
+      "nombre_imagen": null,
+      "url": "http://img5"
+    },
+    {
+      "tips_id": 6,
+      "titulo": "Solo leche para mascotas",
+      "descripcion": "la Lactosa puede ser tóxico para los perros y gatos, se recomienda dar leche eclusivamente para mascotas.",
+      "veterinario_id": 1,
+      "nombre": "pepito",
+      "apellido": "Perez",
+      "imagen_id": 9,
+      "nombre_imagen": null,
+      "url": "http://img6"
+    }
+  ],
+  "message": null
+}

@@ -23,11 +23,19 @@ public class UsuarioController {
 
     @Autowired
     private GestionUsuarioBl gestionUsuarioBl;
-
+    /**
+     *Metodo para listar los usuarios registrados
+     *
+     */
     @GetMapping(path = "/usuario")
     public ResponseDto findAllUsuarios(){
         return new ResponseDto(true,gestionUsuarioBl.findAllUsuarios(),null);
     }
+    /**
+     *
+     * Metodo para listar los usuario por ID
+     *
+     */
 
     @GetMapping(path = "/usuario/{usuarioId}")
     public ResponseDto findUsuarioById(@PathVariable Integer usuarioId){
@@ -40,6 +48,11 @@ public class UsuarioController {
         }
 
     }
+    /**
+     *
+     * Metodo para registrar un usuario a la vez
+     *
+     */
     @PostMapping(path = "/usuario")
     public ResponseDto createUsuario(@RequestBody Usuario usuario){
         if(usuario.getNombre_usuario() == null || usuario.getNombre_usuario().trim().equals("") ){

@@ -17,12 +17,21 @@ public class TipsController {
 
     @Autowired
     private GestionTipsBl gestionTipsBl;
-
+    /**
+     *
+     * Metodo para listar los tips que fueron agregados por los veterinarios registrados
+     *
+     */
     @GetMapping(path = "/tips")
     public ResponseDto findAllTips(){
         return new ResponseDto(true,gestionTipsBl.findAllTips(),null);
     }
 
+    /**
+     *
+     * Metodo para listar los tips registrados por ID
+     *
+     */
     @GetMapping(path = "/tips/{tipsId}")
     public ResponseDto findTipsById(@PathVariable Integer tipsId){
         TipsVeterinario tipsVeterinario = gestionTipsBl.T(tipsId);
@@ -34,6 +43,11 @@ public class TipsController {
         }
 
     }
+    /**
+     *
+     * Metodo para registrar un Tip a la vez.
+     *
+     */
     @PostMapping(path = "/tips")
     public ResponseDto creartipsVeterinario(@RequestBody TipsVeterinario tipsVeterinario){
         if(tipsVeterinario.getNombre_imagen() == null || tipsVeterinario.getNombre_imagen().trim().equals("") ){
